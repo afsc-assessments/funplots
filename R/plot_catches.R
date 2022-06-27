@@ -12,6 +12,6 @@
 #' plot_catches(year = 2022,species = "DUSK",area = "GOA")
 
 plot_catches<-function(year,species,area) {
-  #read in catch data from afscdata package
-  c.df<-afscdata::q_catch(year=year, species=species, area=area, akfin="AKFIN", save = TRUE)
+
+    c.df<-afscdata::q_catch(year=year, species=species, area=area, akfin="AKFIN", save = TRUE)
 }
