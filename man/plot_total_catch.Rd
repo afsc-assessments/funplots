@@ -12,6 +12,8 @@ plot_total_catch(year, species, area, db = akfin)
 \item{species}{species group code, e.g. "DUSK" found where}
 
 \item{area}{sample area "GOA", "AI" or "BS" (or combos)}
+
+\item{db}{database to use}
 }
 \value{
 
@@ -20,5 +22,5 @@ plot_total_catch(year, species, area, db = akfin)
 Plot catches for each species by gear
 }
 \examples{
-plot_catches(year = 2022,species = "DUSK",area = "GOA")
+plot_total_catch(year = 2022,species = "DUSK",area = "GOA",db = akfin)
 }

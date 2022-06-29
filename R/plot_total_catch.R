@@ -1,9 +1,11 @@
 
 #' Plot catches for each species by gear
 #'
+#' @param thedata catch data frame
 #' @param year latest year to include
 #' @param species species group code, e.g. "DUSK" found where
 #' @param area sample area "GOA", "AI" or "BS" (or combos)
+#' @param db database to use
 #'
 #' @return
 #' @export
@@ -27,13 +29,14 @@
 
 #'
 #' @examples
-#' plot_total_catches(year = 2022,species = "DUSK",area = "GOA")
+#' plot_total_catch(year = 2022,species = "DUSK",area = "GOA",db = akfin)
 
-plot_total_catch<-function(year,species,area,db = akfin) {
+plot_total_catch<-function(thedata,year,species,area,db = akfin) {
     #pull catch data
-    c.df<-afscdata::q_catch(year=year, species=species, area=area, db = db,save = FALSE)
-    return(c.df)
 
+    csum.df<-thedata %>% group_by(YEAR) %>%
+      summarise(Total = sum(TONS))
+      g<-ggplot(data = csum.df,aes(x = YEAR,y = Total))
 
-
+return(g)
 }

@@ -23,12 +23,14 @@ library(funplots)
     # establish akfin connection
     akfin = DBI::dbConnect(odbc::odbc(), "akfin",
                            UID = akfin_user, PWD = akfin_pwd)
+   c.df<-afscdata::q_catch(year=year, species=species, area=area, db = db,save = FALSE)
+
 
 ```
 
 ```{r plot total catch, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Figure 1. Time series of total catch (mt)"}
 
-p<-plot_total_catch(year = year,species=species,area=area)
+p<-plot_total_catch(thedata = c.df,year = year,species=species,area=area)
 p
 ```
 
