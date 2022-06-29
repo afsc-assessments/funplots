@@ -13,6 +13,7 @@ RoxygenNote: 7.1.2
 Imports: 
     dplyr,
     ggplot2,
-    magrittr
+    magrittr,
+    odbc
 Remotes:
     github::afsc-assessments/afscdata

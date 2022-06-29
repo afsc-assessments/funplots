@@ -1,0 +1,39 @@
+---
+title: "Make_Catch_Figures"
+author: "Carey McGilliard"
+date: "6/29/22"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(funplots)
+```
+
+```{r readfiles, include = FALSE, message = FALSE, warning = FALSE}
+  year =2022
+  species = "ARTH"
+  area = "GOA"
+  afsc_species = 10110
+  norpac_species = 141
+  akfin_user = ""
+  akfin_pwd = ""
+
+
+    # establish akfin connection
+    akfin = DBI::dbConnect(odbc::odbc(), "akfin",
+                           UID = akfin_user, PWD = akfin_pwd)
+
+```
+
+```{r plot total catch, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Figure 1. Time series of total catch (mt)"}
+
+p<-plot_total_catch(year = year,species=species,area=area)
+p
+```
+
+```{r close_database, include = FALSE, message = FALSE, warning = FALSE}
+
+    DBI::dbDisconnect(akfin)
+
+```
