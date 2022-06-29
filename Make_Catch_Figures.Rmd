@@ -12,8 +12,8 @@ library(funplots)
 
 ```{r readfiles, include = FALSE, message = FALSE, warning = FALSE}
   year =2022
-  species = "ARTH"
-  area = "GOA"
+  species = 'ARTH'
+  area = 'GOA'
   afsc_species = 10110
   norpac_species = 141
   akfin_user = ""

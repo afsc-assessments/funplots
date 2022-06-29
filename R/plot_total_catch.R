@@ -22,17 +22,16 @@
 #' @importFrom ggplot2 labeller
 #' @importFrom ggplot2 theme
 #' @importFrom ggplot2 scale_color_manual
-#' @importFrom viridis scale_color_viridis
 #' @importFrom ggplot2 scale_fill_discrete
 #' @importFrom ggplot2 labs
 
 #'
 #' @examples
-#' plot_catches(year = 2022,species = "DUSK",area = "GOA")
+#' plot_total_catches(year = 2022,species = "DUSK",area = "GOA")
 
 plot_total_catch<-function(year,species,area,db = akfin) {
     #pull catch data
-    c.df<-afscdata::q_catch(year=year, species=species, area=area, db = db,save = TRUE)
+    c.df<-afscdata::q_catch(year=year, species=species, area=area, db = db,save = FALSE)
     return(c.df)
 
 

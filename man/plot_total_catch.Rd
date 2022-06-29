@@ -4,7 +4,7 @@
 \alias{plot_total_catch}
 \title{Plot catches for each species by gear}
 \usage{
-plot_total_catch(year, species, area)
+plot_total_catch(year, species, area, db = akfin)
 }
 \arguments{
 \item{year}{latest year to include}
