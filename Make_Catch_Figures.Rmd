@@ -16,8 +16,8 @@ library(funplots)
   area = 'BSAI'
   afsc_species = 10261
   norpac_species = 120
-  akfin_user = "cmcgilliard"
-  akfin_pwd = "afstar12"
+  akfin_user = ""
+  akfin_pwd = ""
 
 
     # establish akfin connection
