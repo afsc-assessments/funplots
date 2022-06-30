@@ -14,6 +14,9 @@ Imports:
     dplyr,
     ggplot2,
     magrittr,
-    odbc
+    odbc,
+    stringr,
+    viridis,
+    viridisLite
 Remotes:
     github::afsc-assessments/afscdata

@@ -4,16 +4,16 @@
 \alias{plot_total_catch}
 \title{Plot catches for each species by gear}
 \usage{
-plot_total_catch(year, species, area, db = akfin)
+plot_total_catch(thedata, year, species, area)
 }
 \arguments{
+\item{thedata}{catch data frame}
+
 \item{year}{latest year to include}
 
 \item{species}{species group code, e.g. "DUSK" found where}
 
 \item{area}{sample area "GOA", "AI" or "BS" (or combos)}
-
-\item{db}{database to use}
 }
 \value{
 
