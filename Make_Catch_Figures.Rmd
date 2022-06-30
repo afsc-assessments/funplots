@@ -1,8 +1,8 @@
 ---
 title: "Catch Figures"
-author: "Carey McGilliard"
-date: "6/29/22"
-output: word_document
+output: 
+  word_document:
+    reference_docx: output_template.docx
 ---
 
 ```{r setup, include=FALSE}
@@ -28,7 +28,7 @@ library(funplots)
 
 ```
 
-```{r plot total catch, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Figure 1. Time series of total catch (mt) by gear. TRW is Trawl, OTH is Other, HAL is Hook and Line, and GLN is Gillnet"}
+```{r plot total catch, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Figure 1. Time series of total catch (mt) by gear. TRW is Trawl, OTH is Other, HAL is Hook and Line, and GLN is Gillnet."}
 
 p<-plot_total_catch(thedata = c.df,year = year,species=species,area=area)
 p
