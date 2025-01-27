@@ -1,15 +1,15 @@
 Package: funplots
-Title: What the Package Does (One Line, Title Case)
+Title: Exploratory plots of Alaskan survey and fisheries data in support of stock assessment
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Carey", "McGilliard", , "carey.mcgilliard@noaa.gov", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Pulls in survey, observer and catch data from the Eastern Bering Sea, Northern Bering Sea, Aleutian Islands, and Gulf of Alaska and automates creation of plots for each groundfish species to understand time-varying, seasonal, and spatial aspects of these fish populations and fisheries. This package was created in support of Alaska stock assessment science to inform model specification and interpretation.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Imports: 
     dplyr,
     ggplot2,
@@ -20,3 +20,5 @@ Imports:
     viridisLite
 Remotes:
     github::afsc-assessments/afscdata
+Suggests:
+    keyring

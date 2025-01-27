@@ -8,6 +8,12 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=8, out.width = 600, out.height = 400)
 library(funplots)
+library(keyring)
+library(odbc)
+
+#keyring::key_set_with_value(service="afsc", username="", password = "")
+#keyring::key_set_with_value(service = "akfin", username = "", password = "")
+
 ```
 
 ```{r readfiles, include = FALSE, message = FALSE, warning = FALSE}
@@ -16,8 +22,10 @@ library(funplots)
   area = 'BSAI'
   afsc_species = 10261
   norpac_species = 120
-  akfin_user = ""
-  akfin_pwd = ""
+  afsc_user = keyring::key_list("afsc")$username
+  afsc_pwd = keyring::key_get("afsc",keyring::key_list("afsc")$username)
+  akfin_user = keyring::key_list("akfin")$username
+  akfin_pwd = keyring::key_get("akfin",keyring::key_list("akfin")$username)
 
 
     # establish akfin connection

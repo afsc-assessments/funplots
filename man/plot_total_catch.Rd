@@ -15,9 +15,6 @@ plot_total_catch(thedata, year, species, area)
 
 \item{area}{sample area "GOA", "AI" or "BS" (or combos)}
 }
-\value{
-
-}
 \description{
 Plot catches for each species by gear
 }
